@@ -1,26 +1,7 @@
-" Vim Plugin:	Edit the file with an existing Vim if possible
-" Maintainer:	Bram Moolenaar
-" Last Change:	2008 May 29
-
-" This is a plugin, drop it in your (Unix) ~/.vim/plugin or (Win32)
-" $VIM/vimfiles/plugin directory.  Or make a symbolic link, so that you
-" automatically use the latest version.
-
-" This plugin serves two purposes:
-" 1. On startup, if we were invoked with one file name argument and the file
-"    is not modified then try to find another Vim instance that is editing
-"    this file.  If there is one then bring it to the foreground and exit.
-" 2. When a file is edited and a swap file exists for it, try finding that
-"    other Vim and bring it to the foreground.  Requires Vim 7, because it
-"    uses the SwapExists autocommand event.
-if v:version < 700
-  finish
-endif
 
 if v:version < 700
     finish
 endif
-
 runtime! macros/editexisting.vim
 
 
